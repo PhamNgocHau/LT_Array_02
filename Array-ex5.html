@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+String1:<input type="text" id="string1">
+String2:<input type="text" id="string2">
+<button onclick="compareStr()">Compare Strings</button>
+<p id="test"></p>
+<script>
+    function compareStr() {
+        var string1 = document.getElementById('string1').value;
+        var string2 = document.getElementById('string2').value;
+        var result = JSON.stringify(string1) === JSON.stringify(string2);
+
+        document.getElementById('test').innerHTML = 'Compare Strings: ' + result;
+        document.getElementById('test').style.color = 'red';
+    }
+</script>
+</body>
+</html>
